@@ -12,7 +12,7 @@ const Sidebar = ({ selectedCategory, setSelectedCategory, maxPrice, setMaxPrice 
     <aside className="w-full lg:w-64 bg-[#0f4c81] text-white p-6 rounded-lg shadow-md h-fit space-y-6">
       <h2 className="text-xl font-bold border-b border-white/20 pb-2">Filters</h2>
       
-      {/* Category Filter */}
+      {/* category filter */}
       <div className="space-y-3">
         <h3 className="font-semibold text-sm uppercase tracking-wider text-gray-200">Category</h3>
         {['All', 'Electronics', 'Clothing', 'Home'].map((cat) => (
@@ -29,7 +29,7 @@ const Sidebar = ({ selectedCategory, setSelectedCategory, maxPrice, setMaxPrice 
         ))}
       </div>
 
-      {/* Price Range Filter */}
+      {/* price filter */}
       <div className="space-y-3">
         <h3 className="font-semibold text-sm uppercase tracking-wider text-gray-200">Price</h3>
         <div className="flex justify-between text-xs text-gray-300">
