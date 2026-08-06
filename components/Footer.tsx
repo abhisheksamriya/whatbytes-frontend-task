@@ -6,7 +6,6 @@ const Footer = () => {
     <footer className="bg-dark-blue text-white px-8 md:px-16 py-8 mt-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
         
-        {/* Left: Filters */}
         <div>
           <h4 className="font-bold mb-3 uppercase tracking-wider">Filters</h4>
           <div className="flex flex-wrap gap-4 text-gray-300">
@@ -17,14 +16,12 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Middle: About Us */}
         <div>
           <h4 className="font-bold mb-3 uppercase tracking-wider">About Us</h4>
           <p className="text-gray-300 mb-1 cursor-pointer hover:underline">About Us</p>
           <p className="text-gray-300 cursor-pointer hover:underline">Contact</p>
         </div>
 
-        {/* Right: Follow Us with circular background icons */}
         <div>
           <h4 className="font-bold mb-3 uppercase tracking-wider">Follow Us</h4>
           <div className="flex items-center gap-3">
@@ -42,7 +39,6 @@ const Footer = () => {
 
       </div>
 
-      {/* Bottom Copyright */}
       <div className="max-w-7xl mx-auto border-t border-white/20 mt-8 pt-4 text-xs text-gray-300 flex justify-start">
         © 2024 American
       </div>
