@@ -1,17 +1,16 @@
+'use client';
 import { Search, ShoppingCart, User } from "lucide-react";
 import Link from "next/link";
+import { useStore } from "@/store/useStore";
 
-interface NavbarProps {
-  searchQuery: string;
-  setSearchQuery: (query: string) => void;
-}
+const Navbar = () => {
+  const { searchQuery, setSearchQuery } = useStore();
 
-const Navbar = ({ searchQuery, setSearchQuery }: NavbarProps) => {
   return (
     <header className="bg-brand-blue text-white px-4 md:px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4 shadow-md">
       <div className="text-2xl font-bold tracking-wider w-full md:w-auto flex justify-between items-center">
         <a href="/">Logo</a>
-        {/* for mobile */}
+        {/* mobile */}
         <div className="flex md:hidden items-center gap-2">
           <Link href="/cart" className="flex items-center gap-1 bg-dark-blue hover:bg-dark-blue/80 px-3 py-2 rounded-md text-sm font-medium transition">
             <ShoppingCart size={16} />
@@ -32,11 +31,10 @@ const Navbar = ({ searchQuery, setSearchQuery }: NavbarProps) => {
           placeholder="Search for products..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full pl-10 pr-4 py-2 text-white placeholder-gray-300 rounded-md focus:outline-none border border-white bg-white/5 text-sm"
+          className="w-full pl-10 pr-4 py-2 text-white placeholder-gray-300 rounded-md focus:outline-none border border-white/30 bg-white/10 text-sm"
         />
       </div>
-
-      {/* for desktop */}
+        {/* desktop */}
       <div className="hidden md:flex items-center gap-3">
         <Link href="/cart" className="flex items-center gap-2 bg-dark-blue hover:bg-dark-blue/80 px-4 py-2 rounded-md text-sm font-medium transition">
           <ShoppingCart size={18} />
