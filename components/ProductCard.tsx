@@ -11,7 +11,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 flex flex-col justify-between hover:shadow-md transition">
       <Link href={`/product/${product.id}`}>
-        <div className="relative w-full h-48 rounded-md overflow-hidden bg-gray-100 mb-4">
+        <div className="relative w-full h-48 md:h-54 rounded-md overflow-hidden bg-gray-100 mb-4">
           <img src={product.image} alt={product.title} className="object-cover w-full h-full hover:scale-105 transition duration-300" />
         </div>
         <h3 className="font-semibold text-gray-900 text-lg mb-1">{product.title}</h3>
