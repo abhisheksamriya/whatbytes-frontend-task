@@ -1,4 +1,3 @@
-import React from 'react';
 import { FacebookIcon, InstagramIcon, TwitterIcon } from './Icons';
 
 const Footer = () => {
