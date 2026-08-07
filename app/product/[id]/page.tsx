@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import { products } from '@/data/products';
 import { Star } from 'lucide-react';
 import Link from 'next/link';
+import { useStore } from '@/store/useStore';
 
 export default function ProductDetailPage() {
   const params = useParams();
@@ -12,6 +13,8 @@ export default function ProductDetailPage() {
   
   const product = products.find((p) => p.id === productId);
   const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useStore();
+  const [added, setAdded] = useState(false);
 
   if (!product) {
     return (
@@ -23,6 +26,11 @@ export default function ProductDetailPage() {
       </div>
     );
   }
+
+  const handleAddToCart = () => {
+    addToCart(product, quantity);
+    setAdded(true);
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-6 md:py-12">
@@ -78,8 +86,11 @@ export default function ProductDetailPage() {
               </div>
             </div>
 
-            <button className="w-full bg-brand-blue hover:bg-brand-blue/90 text-white py-3 rounded-md font-medium transition shadow-md">
-              Add to Cart
+<button
+              onClick={handleAddToCart}
+              className="w-full bg-brand-blue hover:bg-brand-blue/90 text-white py-3 rounded-md font-medium transition shadow-md"
+            >
+              {added ? 'Added to Cart! ✓' : 'Add to Cart'}
             </button>
           </div>
         </div>

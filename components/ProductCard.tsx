@@ -1,13 +1,22 @@
-import React from 'react';
+"use client";
+
 import { Product } from '@/data/products';
+import { useStore } from '@/store/useStore';
 import { Star } from 'lucide-react';
 import Link from 'next/link';
+import toast from 'react-hot-toast';
 
 interface ProductCardProps {
   product: Product;
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {
+    const { addToCart } = useStore();
+
+  const handleAddToCart = () => {
+    addToCart(product, 1);
+    toast.success(`${product.title} added to cart!`);
+  };
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 flex flex-col justify-between hover:shadow-md transition">
       <Link href={`/product/${product.id}`}>
@@ -30,7 +39,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         )}
       </Link>
 
-      <button className="w-full bg-[#0f4c81] hover:bg-[#16568c] text-white py-2 rounded-md font-medium text-sm transition">
+      <button onClick={handleAddToCart} className="w-full bg-[#0f4c81] hover:bg-[#16568c] text-white py-2 rounded-md font-medium text-sm transition">
         Add to Cart
       </button>
     </div>
