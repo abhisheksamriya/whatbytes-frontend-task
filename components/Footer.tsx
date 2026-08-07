@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FacebookIcon, InstagramIcon, TwitterIcon } from './Icons';
 
 const Footer = () => {
@@ -8,10 +9,10 @@ const Footer = () => {
         <div>
           <h4 className="font-bold mb-3 uppercase tracking-wider">Filters</h4>
           <div className="flex flex-wrap gap-4 text-gray-300">
-            <a href='/' >All</a >
-            <a href='/?category=electronics' >Electronics</a >
-            <a href='/?category=clothing' >Clothing</a >
-            <a href='/?category=home' >Home</a >
+            <Link href='/' >All</Link >
+            <Link href='/?category=electronics' >Electronics</Link >
+            <Link href='/?category=clothing' >Clothing</Link >
+            <Link href='/?category=home' >Home</Link >
           </div>
         </div>
 
