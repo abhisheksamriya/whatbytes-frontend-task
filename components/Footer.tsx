@@ -8,10 +8,10 @@ const Footer = () => {
         <div>
           <h4 className="font-bold mb-3 uppercase tracking-wider">Filters</h4>
           <div className="flex flex-wrap gap-4 text-gray-300">
-            <span>All</span>
-            <span>Electronics</span>
-            <span>Clothing</span>
-            <span>Home</span>
+            <a href='/' >All</a >
+            <a href='/?category=electronics' >Electronics</a >
+            <a href='/?category=clothing' >Clothing</a >
+            <a href='/?category=home' >Home</a >
           </div>
         </div>
 

@@ -11,6 +11,7 @@ export default function CartPage() {
   const shipping = cart.length > 0 ? 15 : 0;
   const total = subtotal + shipping;
 
+  // if cart have no items 
   if (cart.length === 0) {
     return (
       <div className="max-w-7xl mx-auto px-4 py-20 text-center">
