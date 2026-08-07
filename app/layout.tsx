@@ -18,6 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Blueshop",
   description: "A shopping app",
+    icons: {
+    icon: "/logo.png", 
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

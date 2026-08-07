@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <header className="bg-brand-blue text-white px-4 md:px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4 shadow-md sticky top-0 z-50">
       <div className="text-2xl font-bold tracking-wider w-full md:w-auto flex justify-between items-center">
-        <Link href="/">Logo</Link>
+        <Link href="/"><span className="text-dark-blue font-black">BLUE</span>shop</Link>
         {/* for mobile */}
         <div className="flex md:hidden items-center gap-3">
           <Link href="/cart" className="relative flex items-center gap-1 bg-dark-blue hover:bg-dark-blue/80 px-3 py-2 rounded-md text-sm font-medium transition">
